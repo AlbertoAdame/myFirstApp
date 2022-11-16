@@ -15,12 +15,7 @@ export class MainPageComponent {
     health: 0
   }
 
-    personajes = [
-        {name : "Shelly", health: 50},
-        {name : "Colt", health: 1050},
-        {name : "Nita", health: 2050},
-        {name : "ElPrimo", health: 3050}
-    ]
+    
 
 
 

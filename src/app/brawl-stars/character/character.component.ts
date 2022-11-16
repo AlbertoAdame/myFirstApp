@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Character } from '../interfaces/character';
+import { BSService } from '../services/brawl-stars.service';
 
 
 
@@ -10,8 +11,12 @@ import { Character } from '../interfaces/character';
 })
 export class CharacterComponent{
 
-  constructor() { }
+  constructor(private bsService:BSService) {
+    
+  }
 
-  @Input() personajes: Character[] = []
+  get personajes():Character[]{
+    return this.bsService.personajes;
+  }
 
 }

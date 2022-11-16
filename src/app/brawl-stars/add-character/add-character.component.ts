@@ -8,20 +8,16 @@ import { Character } from '../interfaces/character';
 })
 export class AddCharacterComponent{
 
-  constructor() { }
-
-  @Input() nuevo = {
-    name: "",
-    health: 0
+  constructor(private bsService:BBS) { 
+    console.log('Constructor  add character')
   }
 
-  @Input() personajes: Character[] = [];
+ 
+
+  @Input() nuevo: Character = { name: '', health:0};
 
   addCharacter(){
-    let add={
-      name:this.nuevo.name,
-      health:this.nuevo.health
-    }
+    this.bsService.a
     this.personajes.push(add)
   }
 
